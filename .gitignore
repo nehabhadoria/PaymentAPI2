@@ -1,22 +1,32 @@
+﻿# Build results
 bin/
 obj/
+
+# User-specific files
 *.user
 *.suo
 *.userosscache
+*.csproj.user
 *.sln.docstates
 
-# ASP.NET Secrets
-secrets.json
-
-# Ignore Visual Studio & Rider files
+# VS Code & Rider
 .vscode/
 .idea/
-*.csproj.user
 
-# Ignore environment files
+# Secrets and config
+secrets.json
 .env
+appsettings.Production.json  # ✅ Don't commit this to avoid exposing secrets
+appsettings.Development.json # Optional: ignore if it has sensitive data
+
+# Local DB or generated files
 *.db
 *.sqlite
 
-# Ignore published output
+# Publish outputs
 publish/
+
+# ASP.NET Identity & EF
+*.mdf
+*.ldf
+*.log
